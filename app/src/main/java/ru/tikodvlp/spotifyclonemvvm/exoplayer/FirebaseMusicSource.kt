@@ -80,6 +80,7 @@ class FirebaseMusicSource @Inject constructor(
                 field = value
             }
         }
+
     fun whenReady(action: (Boolean) -> Unit): Boolean  {
         if (state == STATE_CREATED || state == STATE_INITIALIZING) {
             onReadyListeners += action
@@ -90,7 +91,6 @@ class FirebaseMusicSource @Inject constructor(
         }
     }
 }
-
 
 enum class State {
     STATE_CREATED,

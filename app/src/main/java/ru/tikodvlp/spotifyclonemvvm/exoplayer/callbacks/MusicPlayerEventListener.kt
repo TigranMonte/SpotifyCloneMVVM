@@ -5,9 +5,7 @@ import com.google.android.exoplayer2.PlaybackException
 import com.google.android.exoplayer2.Player
 import ru.tikodvlp.spotifyclonemvvm.exoplayer.MusicService
 
-class MusicPlayerEventListener(
-    private val musicService: MusicService
-) : Player.Listener {
+class MusicPlayerEventListener(private val musicService: MusicService) : Player.Listener {
 
     override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
         super.onPlayerStateChanged(playWhenReady, playbackState)
