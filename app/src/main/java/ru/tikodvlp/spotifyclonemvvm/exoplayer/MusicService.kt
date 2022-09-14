@@ -19,6 +19,7 @@ import ru.tikodvlp.spotifyclonemvvm.exoplayer.callbacks.MusicPlaybackPreparer
 import ru.tikodvlp.spotifyclonemvvm.exoplayer.callbacks.MusicPlayerEventListener
 import ru.tikodvlp.spotifyclonemvvm.exoplayer.callbacks.MusicPlayerNotificationListener
 import ru.tikodvlp.spotifyclonemvvm.other.Constants.MEDIA_ROOT_ID
+import ru.tikodvlp.spotifyclonemvvm.other.Constants.NETWORK_ERROR
 import javax.inject.Inject
 
 private const val SERVICE_TAG = "MusicService"
@@ -151,6 +152,7 @@ class MusicService : MediaBrowserServiceCompat() {
                             isPlayerInitialized = true
                         }
                     } else {
+                        mediaSession.sendSessionEvent(NETWORK_ERROR, null)
                         result.sendResult(null)
                     }
                 }
