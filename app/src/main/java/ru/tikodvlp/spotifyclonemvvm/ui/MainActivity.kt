@@ -1,9 +1,10 @@
-package ru.tikodvlp.spotifyclonemvvm
+package ru.tikodvlp.spotifyclonemvvm.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.RequestManager
 import dagger.hilt.android.AndroidEntryPoint
+import ru.tikodvlp.spotifyclonemvvm.R
 import javax.inject.Inject
 
 @AndroidEntryPoint
