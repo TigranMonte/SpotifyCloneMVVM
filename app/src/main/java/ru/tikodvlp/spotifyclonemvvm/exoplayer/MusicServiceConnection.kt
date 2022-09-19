@@ -76,17 +76,14 @@ class MusicServiceConnection(context: Context) {
             )))
         }
     }
-
     private inner class MediaControllerCallback : MediaControllerCompat.Callback() {
 
         override fun onPlaybackStateChanged(state: PlaybackStateCompat?) {
             _playbackState.postValue(state)
         }
-
         override fun onMetadataChanged(metadata: MediaMetadataCompat?) {
             _curPlayingSong.postValue(metadata)
         }
-
         override fun onSessionEvent(event: String?, extras: Bundle?) {
             super.onSessionEvent(event, extras)
             when(event) {
@@ -100,7 +97,6 @@ class MusicServiceConnection(context: Context) {
                 )
             }
         }
-
         override fun onSessionDestroyed() {
             mediaBrowserConnectionCallback.onConnectionSuspended()
         }
