@@ -33,11 +33,7 @@ class MusicServiceConnection(context: Context) {
     private val mediaBrowserConnectionCallback = MediaBrowserConnectionCallback(context)
 
     private val mediaBrowser = MediaBrowserCompat(
-        context,
-        ComponentName(
-            context,
-            MusicService::class.java
-        ),
+        context, ComponentName(context, MusicService::class.java),
         mediaBrowserConnectionCallback,
         null
     ).apply {
@@ -76,6 +72,7 @@ class MusicServiceConnection(context: Context) {
             )))
         }
     }
+
     private inner class MediaControllerCallback : MediaControllerCompat.Callback() {
 
         override fun onPlaybackStateChanged(state: PlaybackStateCompat?) {
