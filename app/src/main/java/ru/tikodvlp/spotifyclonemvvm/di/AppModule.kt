@@ -10,6 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ru.tikodvlp.spotifyclonemvvm.R
+import ru.tikodvlp.spotifyclonemvvm.adapters.SwipeSongAdapter
 import ru.tikodvlp.spotifyclonemvvm.exoplayer.MusicServiceConnection
 import javax.inject.Singleton
 
@@ -22,6 +23,10 @@ object AppModule {
     fun provideMusicServiceConnection(
         @ApplicationContext context: Context
     ) = MusicServiceConnection(context)
+
+    @Singleton
+    @Provides
+    fun provideSwipeSongAdapter() = SwipeSongAdapter()
 
     @Singleton
     @Provides
