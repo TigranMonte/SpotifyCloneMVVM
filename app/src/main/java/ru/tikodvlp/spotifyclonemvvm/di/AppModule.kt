@@ -38,5 +38,4 @@ object AppModule {
             .error(R.drawable.ic_launcher_background)       // если случилась ошибка отображать данный image
             .diskCacheStrategy(DiskCacheStrategy.DATA)     // чтобы картинки кешировались с Glide
     )
-
 }

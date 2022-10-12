@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.list_item.view.*
-import ru.tikodvlp.spotifyclonemvvm.R
 import ru.tikodvlp.spotifyclonemvvm.data.entities.Song
 
 abstract class BaseSongAdapter(
