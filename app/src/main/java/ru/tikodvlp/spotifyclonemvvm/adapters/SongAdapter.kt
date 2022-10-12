@@ -1,15 +1,9 @@
 package ru.tikodvlp.spotifyclonemvvm.adapters
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import kotlinx.android.synthetic.main.list_item.view.*
 import ru.tikodvlp.spotifyclonemvvm.R
-import ru.tikodvlp.spotifyclonemvvm.data.entities.Song
 import javax.inject.Inject
 
 class SongAdapter @Inject constructor(
