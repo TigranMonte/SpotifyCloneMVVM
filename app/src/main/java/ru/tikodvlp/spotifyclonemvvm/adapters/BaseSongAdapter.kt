@@ -18,12 +18,10 @@ abstract class BaseSongAdapter(
         override fun areItemsTheSame(oldItem: Song, newItem: Song): Boolean {
             return oldItem.mediaId == newItem.mediaId
         }
-
         override fun areContentsTheSame(oldItem: Song, newItem: Song): Boolean {
             return oldItem.hashCode() == newItem.hashCode()
         }
     }
-
     protected abstract val differ: AsyncListDiffer<Song>
 
     var songs: List<Song>
